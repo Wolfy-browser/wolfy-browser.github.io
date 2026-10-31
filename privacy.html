@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности — Wolfy</title>
+<meta name="description" content="Политика конфиденциальности браузера Wolfy: какие данные получает приложение, где они хранятся, как удалить аккаунт и отозвать доступ.">
+<style>
+  :root {
+    --bg: #0e1013;
+    --panel: #161a20;
+    --text: #e7eaee;
+    --muted: #9aa4b2;
+    --accent: #6ea8fe;
+    --accent-2: #7ee0a8;
+    --line: #262d37;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.68 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 0 16px 56px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  header { padding: 44px 0 20px; }
+  h1 { margin: 0 0 8px; font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; }
+  .meta { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  section {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 0 0 14px;
+  }
+  h2 { margin: 0 0 10px; font-size: 1.12rem; letter-spacing: -0.01em; color: var(--accent); }
+  p { margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 0 0 8px; }
+  li:last-child { margin-bottom: 0; }
+  code {
+    background: #1f242c;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 1px 5px;
+    font-size: 0.9em;
+  }
+  .key {
+    border-color: #2b4a7a;
+    background: #131b28;
+  }
+  .key h2 { color: var(--accent-2); }
+  footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.94rem;
+  }
+  a { color: var(--accent); }
+  a:hover { color: #a8c7ff; }
+  @media (min-width: 640px) {
+    header { padding: 60px 0 24px; }
+    h1 { font-size: 2.2rem; }
+    section { padding: 24px 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Политика конфиденциальности Wolfy</h1>
+    <p class="meta">Обновлено: 31 октября 2026 · Контакт: <a href="mailto:nekn3n@gmail.com">nekn3n@gmail.com</a></p>
+  </header>
+
+  <section class="key">
+    <h2>Коротко</h2>
+    <p>Wolfy не собирает статистику и не отправляет ваши данные на свои серверы. Всё, что вы делаете в браузере, остаётся на вашем компьютере. При входе через Google приложение получает от Google только почту, имя и идентификатор аккаунта, а пароль от Google не видит.</p>
+  </section>
+
+  <section>
+    <h2>1. Какие данные получает приложение</h2>
+    <p>При входе через Google приложение получает от Google три вещи: адрес электронной почты, имя и неизменяемый идентификатор аккаунта Google. Другие данные о вас приложение не запрашивает. Используются только базовые права доступа (<code>openid</code>, <code>email</code>, <code>profile</code>).</p>
+    <p>Больше никакой личной информации приложение не собирает.</p>
+  </section>
+
+  <section>
+    <h2>2. Где хранятся данные</h2>
+    <p>Данные, полученные от Google (почта, имя и идентификатор аккаунта), хранятся только локально на вашем компьютере, в файле <code>accounts.json</code>, и никуда не отправляются.</p>
+    <p>Закладки, история, настройки, список «прочитать позже» и открытые вкладки тоже хранятся только на вашем компьютере. Пароли и ключ ИИ-помощника шифруются средствами вашей системы (Windows DPAPI, macOS Keychain, Linux keyring) и не отправляются наружу.</p>
+    <p>Статистика использования не собирается. Журнал ошибок хранится на вашем компьютере.</p>
+  </section>
+
+  <section>
+    <h2>3. Пароль от Google</h2>
+    <p>Пароль от Google Wolfy не видит и не хранит. Вход идёт на странице Google в браузере: Wolfy открывает страницу входа Google, принимает ответ на одноразовом адресе <code>127.0.0.1</code> и проверяет, что токен выдан Google именно для этого приложения и этого входа, а почта подтверждена. Только после этого создаётся сессия в Wolfy.</p>
+    <p>Паролей и регистрации внутри Wolfy нет: войти можно только в аккаунт Google, к которому у вас есть доступ, а проверяет это Google.</p>
+  </section>
+
+  <section>
+    <h2>4. Передача данных третьим лицам</h2>
+    <p>Данные не продаются и не передаются третьим лицам. Личные данные (почта, имя, идентификатор аккаунта, закладки, история, пароли) не покидают ваш компьютер.</p>
+  </section>
+
+  <section class="key">
+    <h2>5. Соответствие политике Google</h2>
+    <p>Использование данных Google соответствует Google API Services User Data Policy, включая требования Limited Use.</p>
+  </section>
+
+  <section>
+    <h2>6. Как удалить аккаунт и данные и отозвать доступ</h2>
+    <ul>
+      <li><b>В Wolfy:</b> выйдите из аккаунта. Владелец может удалить аккаунт вместе с данными в админ-панели. Файл <code>accounts.json</code> можно удалить вручную с компьютера.</li>
+      <li><b>Гостевой вход:</b> данные гостя живут только в памяти и стираются после выхода.</li>
+      <li><b>В Google:</b> отзовите доступ приложения в настройках аккаунта Google — «Безопасность» → «Сторонние приложения с доступом к аккаунту» (myaccount.google.com). После отзыва приложение больше не сможет получать данные аккаунта.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Запросы в сеть</h2>
+    <p>Отдельные функции браузера обращаются в интернет. Это происходит только для работы самих функций:</p>
+    <ul>
+      <li><b>Автообновление</b> — проверка и загрузка новых версий с GitHub (сайт видит ваш IP-адрес).</li>
+      <li><b>Списки блокировки трекеров</b> — загрузка списков при запуске, если они устарели.</li>
+      <li><b>Установка расширений</b> — Chrome Web Store, только когда вы сами ставите расширение.</li>
+      <li><b>Перевод страницы</b> — только когда вы нажимаете «перевести».</li>
+      <li><b>Поиск и подсказки</b> — выбранная вами поисковая система; подсказки при вводе можно выключить в настройках.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. ИИ-помощник</h2>
+    <p>ИИ-помощник выключен, пока вы сами не укажете свой ключ. Если вы его включите, текст страницы и ваши сообщения отправляются в выбранный вами сервис (по умолчанию OpenAI API), и дальше действует политика этого сервиса. Не используйте помощника на страницах с чужими персональными данными.</p>
+  </section>
+
+  <section>
+    <h2>9. Контакт и дата обновления</h2>
+    <p>Вопросы по обработке данных: <a href="mailto:nekn3n@gmail.com">nekn3n@gmail.com</a>.</p>
+    <p>Дата обновления: 31 октября 2026.</p>
+  </section>
+
+  <footer>
+    <p><a href="index.html">← На главную</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
